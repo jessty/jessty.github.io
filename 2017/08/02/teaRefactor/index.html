@@ -10,7 +10,7 @@
     
     <title>
         
-            My first blog in hexo！！！ | 
+            茶叶项目部分重构 | 
         
         Star~
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Star">
     <meta name="description" content="Live your dream, and wear your passion.">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,总结">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://jessty.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="My first blog in hexo！！！ | Star~">
+    <meta property="og:title" content="茶叶项目部分重构 | Star~">
     <meta property="og:description" content="Live your dream, and wear your passion.">
-    
+    <meta property="og:article:tag" content="总结"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -229,7 +229,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quick-Start"><span class="post-toc-number">1.</span> <span class="post-toc-text">Quick Start</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Create-a-new-post"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Create a new post</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Run-server"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Run server</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generate-static-files"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Generate static files</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Introduction"><span class="post-toc-number">1.</span> <span class="post-toc-text">Introduction</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Idea"><span class="post-toc-number">2.</span> <span class="post-toc-text">Idea</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Analysis"><span class="post-toc-number">3.</span> <span class="post-toc-text">Analysis</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#抽离出组件"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">抽离出组件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分析各个组件担当的角色"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">分析各个组件担当的角色</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#确定组件的对外接口或核心部分"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">确定组件的对外接口或核心部分</span></a></li></ol></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -265,7 +265,7 @@
         
     
             <p class="article-headline-p">
-                My first blog in hexo！！！
+                茶叶项目部分重构
             </p>
         </div>
 
@@ -284,7 +284,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Star</strong>
-        <span>3月 15, 2017</span>
+        <span>8月 02, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -308,7 +308,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        
+        <a class="post_tag-link" href="/tags/总结/">总结</a>
     </ul>
     
 
@@ -324,7 +324,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=My first blog in hexo！！！&url=https://jessty.github.io//2017/03/15/hello-world/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=茶叶项目部分重构&url=https://jessty.github.io//2017/08/02/teaRefactor/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -336,7 +336,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://jessty.github.io//2017/03/15/hello-world/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://jessty.github.io//2017/08/02/teaRefactor/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -345,7 +345,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://jessty.github.io//2017/03/15/hello-world/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://jessty.github.io//2017/08/02/teaRefactor/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -357,7 +357,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Star~&title=My first blog in hexo！！！&summary=Live your dream, and wear your passion.&pics=https://jessty.github.io/img/favicon.png&url=https://jessty.github.io/2017/03/15/hello-world/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Star~&title=茶叶项目部分重构&summary=Live your dream, and wear your passion.&pics=https://jessty.github.io/img/favicon.png&url=https://jessty.github.io/2017/08/02/teaRefactor/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -375,15 +375,33 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>&emsp;&emsp;茶叶项目是今年上半年做的，主要是做一个关于茶叶的安全溯源系统，涵盖茶叶的种植、采收、加工、物流和销售这五大方面，系统负责汇集并管理这五个阶段产生的信息，从而进一步实现对茶叶质量与安全的监控和追踪。而我主要参与加工和销售模块的前端实现。</p>
+<p>&emsp;&emsp;前端技术栈主要是：<code>vue + vue-router + axios + element-ui</code><br>&emsp;&emsp;其实，对于我们前端小组来说，我们大多数人包括我，在刚接到项目的时候对vue框架都不是十分熟悉，这导致我们在用vue去做时，遇到许多的坑，也没有充分利用组件化的思维去实现，导致组员做了很多重复的东西。我做到后期对vue有了进一步的了解，于是想重新从零开始重构一下我负责的模块，但是由于后期项目基本定型，而我的重构会造成大面积的改动，所以我只能自娱自乐了呗，技术还是要融合一下滴！</p>
+<h1 id="Idea"><a href="#Idea" class="headerlink" title="Idea"></a>Idea</h1><p>大部分界面基本如下：<br><img src="http://ou1hsqn5g.bkt.clouddn.com/2017080204.PNG?imageMogr2/thumbnail/!90p" alt="Idea图"></p>
+<p>我的想法：</p>
+<ul>
+<li>利用动态路由和嵌套路由匹配，实现组件的层层拼接，形成完整的页面。</li>
+<li>对于各个页面（主要是表格区）的所特有的信息的展示，比如表头字段、操作对应的后台接口url，则通过定义一个个<code>类似配置文件的js文件</code>，在路由匹配时，通过vue的路由钩子读取相应配置文件的信息，并prop传递给子组件，从而实现组件模板的重用。</li>
+<li>其实路由的路径结构与嵌套对象的结构很像（从vue-router的嵌套路由受到的启发），可以直接<code>利用路由路径的结构去设计配置文件</code>里的js嵌套对象，什么样的路径，就读取配置文件的哪部分js对象，达到统一的结构。</li>
+</ul>
+<p>流程图如下：<br><img src="http://ou1hsqn5g.bkt.clouddn.com/2017080203.PNG?imageMogr2/thumbnail/!70p" alt="Idea图"></p>
+<h1 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h1><h2 id="抽离出组件"><a href="#抽离出组件" class="headerlink" title="抽离出组件"></a>抽离出组件</h2><p>每个界面基本可以抽离出<code>header</code>、侧边的<code>nav</code>和中间的<code>tabs</code>组件以及tabs里的<code>table</code>子组件，如下：<br><img src="http://ou1hsqn5g.bkt.clouddn.com/2017080201.PNG" alt="抽离组件"></p>
+<h2 id="分析各个组件担当的角色"><a href="#分析各个组件担当的角色" class="headerlink" title="分析各个组件担当的角色"></a>分析各个组件担当的角色</h2><ul>
+<li>对于header和nav组件，这两个主要充当<code>导航</code>的角色，基本上是使用router-link实现路由跳转</li>
+<li>对于tabs组件，主要进行路由解析、根据解析结果读取配置文件和将配置信息prop给子组件table，起一个<code>中转站和路由解析器</code>的作用</li>
+<li>对于table组件，主要向用户<code>提供表格的各项功能操作</code>。由于多数界面的功能操作都类似，对于不同界面，只要切换功能操作的后台接口url就基本可以实现table各项功能逻辑的重用</li>
+</ul>
+<h2 id="确定组件的对外接口或核心部分"><a href="#确定组件的对外接口或核心部分" class="headerlink" title="确定组件的对外接口或核心部分"></a>确定组件的对外接口或核心部分</h2><ul>
+<li>header和nav没有特别的对外接口</li>
+<li>tabs也没有特别的对外接口，不过，它的核心是路由钩子里的<code>路由解析函数</code>，<br>&emsp;这个函数接受路由钩子里的to和from路由信息，以及tabs组件实例，作为函数参数。<br>&emsp;由于之前说过用路由路径去设计配置文件里的js对象，所以，函数里的路由解析基本是获取to路由信息的params，再利用params去配置文件找到对应信息对象，并传给table子组件。<br>&emsp;此外，该函数还可以处理错误的路径，大致实现：如果根据该路径获取不到配置信息，函数则强制跳转到某些路由下。</li>
+<li>table组件可以再划分为几个小区域，如图：<br><img src="http://ou1hsqn5g.bkt.clouddn.com/2017080202.PNG" alt="table分区"></li>
+</ul>
+<p>每个区域对应相应的table组件的prop接口数据，注意接口数据的部分属性名直接对应element-ui组件的prop属性</p>
+<p>table组件的<code>prop接口</code>分别是：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">tabLabel:<span class="string">''</span>,//对应table所在的el-tab-pane的label</div><div class="line">active:<span class="literal">true</span>,//tabs父组件通过active指定当前table是否active，亦指table所在el-tab-pane是否active</div><div class="line"></div><div class="line">searchObj:&#123;</div><div class="line">  placeholder:<span class="string">''</span>,//搜索框的placeholder</div><div class="line">  label:<span class="string">''</span>,//搜索按钮上的文字</div><div class="line">  suburl:<span class="string">''</span>//搜索请求的子路径</div><div class="line">&#125;,</div><div class="line"></div><div class="line">pageObj:&#123;</div><div class="line">  suburl:<span class="string">''</span>,//向后台请求分页数据的子路径</div><div class="line">  sizes:[],//对应el-pagination组件的pageSizes属性</div><div class="line">&#125;,</div><div class="line"></div><div class="line">operateObj:&#123;</div><div class="line">  add:&#123;</div><div class="line">    label:<span class="string">'新建'</span>,//表格左下角的操作按钮上的文字</div><div class="line">    suburl:<span class="string">''</span>//操作对应的请求的子路径</div><div class="line">  &#125;,</div><div class="line">  upload:&#123;</div><div class="line">    label: <span class="string">'导入'</span>,//上传按钮的label</div><div class="line">    suburl: <span class="string">''</span>,//后台接口子路径</div><div class="line">    dialogTitle:<span class="string">'导入客户信息'</span>,//上传dialog的title</div><div class="line">    dialogTip:<span class="string">'客户类型、所属公司、联系人、联系电话、传真、地址、等级、备注'</span>,//上传dialog的文字tips</div><div class="line">  &#125;,</div><div class="line">  <span class="built_in">export</span>It:&#123;</div><div class="line">    label: <span class="string">'导出'</span>,</div><div class="line">    suburl: customerURL + <span class="string">'/exportExcel'</span>,</div><div class="line">  &#125;</div><div class="line">&#125;,</div><div class="line"></div><div class="line">tableObj:&#123;</div><div class="line">  heads:[//el-table的表头信息</div><div class="line">    &#123;</div><div class="line">      prop:<span class="string">''</span>,//对应el-table-column的prop,</div><div class="line">      label:<span class="string">''</span>,//对应el-table-column的label</div><div class="line">      sortable:<span class="literal">true</span>,//对应el-table-column的sortable</div><div class="line">      width:<span class="string">'20'</span>,//对应el-table-column的width</div><div class="line">    &#125;</div><div class="line">  ],</div><div class="line">  operate:&#123;</div><div class="line">    update:&#123;</div><div class="line">      label:<span class="string">'编辑'</span>,//表格每行的操作按钮的label</div><div class="line">      suburl:<span class="string">''</span>,//操作对应的后台接口子路径</div><div class="line">    &#125;,</div><div class="line">    deleteIt: &#123;</div><div class="line">      label: <span class="string">'删除'</span>,</div><div class="line">      suburl: <span class="string">''</span>,//后台接口子路径</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">&#125;,</div></pre></td></tr></table></figure></p>
+<p>&emsp;table组件的功能操作挺多的，就不一一说了，这篇blog就单纯讲一下重构的大概思路吧。</p>
+<p>&emsp;&emsp;写完了，第一次正式写blog，Enjoy!</p>
+<p>&emsp;&emsp;由于项目原因，我主要放了我负责并重构的销售部分，一些关键文件也删了，大家就看看代码好了吧~</p>
+<p>&emsp;&emsp;<a href="https://github.com/jessty/myTea" target="_blank" rel="external">重构部分的茶叶项目github</a></p>
 
     
 
@@ -407,19 +425,19 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/08/02/teaRefactor/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2017/03/15/hello-world/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
