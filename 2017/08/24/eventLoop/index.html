@@ -10,7 +10,7 @@
     
     <title>
         
-            作用域链与变量对象 | 
+            js事件循环机制 | 
         
         Star~
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://jessty.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="作用域链与变量对象 | Star~">
+    <meta property="og:title" content="js事件循环机制 | Star~">
     <meta property="og:description" content="Live your dream, and wear your passion.">
     <meta property="og:article:tag" content="js基础"> 
 
@@ -229,7 +229,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#执行上下文栈："><span class="post-toc-number">1.</span> <span class="post-toc-text">执行上下文栈：</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#执行上下文"><span class="post-toc-number">2.</span> <span class="post-toc-text">执行上下文</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#VO与AO"><span class="post-toc-number">3.</span> <span class="post-toc-text">VO与AO</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#VO："><span class="post-toc-number">3.1.</span> <span class="post-toc-text">VO：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AO："><span class="post-toc-number">3.2.</span> <span class="post-toc-text">AO：</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#处理上下文代码的过程："><span class="post-toc-number">4.</span> <span class="post-toc-text">处理上下文代码的过程：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-进入执行上下文："><span class="post-toc-number">4.1.</span> <span class="post-toc-text">1.进入执行上下文：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#初始化VO"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">初始化VO</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#初始化AO"><span class="post-toc-number">4.1.2.</span> <span class="post-toc-text">初始化AO</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-执行代码"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">2.执行代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Scope作用域链与-scope-："><span class="post-toc-number">5.</span> <span class="post-toc-text">Scope作用域链与[[scope]]：</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#要点："><span class="post-toc-number">1.</span> <span class="post-toc-text">要点：</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -265,7 +265,7 @@
         
     
             <p class="article-headline-p">
-                作用域链与变量对象
+                js事件循环机制
             </p>
         </div>
 
@@ -324,7 +324,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=作用域链与变量对象&url=https://jessty.github.io//2017/08/24/scopeChain/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=js事件循环机制&url=https://jessty.github.io//2017/08/24/eventLoop/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -336,7 +336,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://jessty.github.io//2017/08/24/scopeChain/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://jessty.github.io//2017/08/24/eventLoop/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -345,7 +345,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://jessty.github.io//2017/08/24/scopeChain/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://jessty.github.io//2017/08/24/eventLoop/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -357,7 +357,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Star~&title=作用域链与变量对象&summary=Live your dream, and wear your passion.&pics=https://jessty.github.io/img/favicon.png&url=https://jessty.github.io/2017/08/24/scopeChain/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Star~&title=js事件循环机制&summary=Live your dream, and wear your passion.&pics=https://jessty.github.io/img/favicon.png&url=https://jessty.github.io/2017/08/24/eventLoop/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -375,34 +375,15 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p><a href="https://segmentfault.com/a/1190000000533094#articleHeader4" target="_blank" rel="external">参考博文</a></p>
-<h1 id="执行上下文栈："><a href="#执行上下文栈：" class="headerlink" title="执行上下文栈："></a>执行上下文栈：</h1><p>&emsp;&emsp;在执行js时，一层层的执行上下文叠成执行上下文栈，全局上下文是栈底，当一个函数被调用是，会将相应的执行上下文压入栈，执行完便出栈。</p>
-<h1 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h1><p>Execution Context，即EC，形象的说：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">EC=&#123;</div><div class="line">    VO:&#123; &#125;,//变量对象，Variable Object，保存有当前作用域的相关的变量和声明</div><div class="line">    this:&#123; &#125;,</div><div class="line">    Scope://当前作用域的作用域链，有自身以及父辈上下文的AO或VO连成，AO即Active Object，活动对象</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="VO与AO"><a href="#VO与AO" class="headerlink" title="VO与AO"></a>VO与AO</h1><p>作用域中的形参、声明的函数名和变量以属性的形式存在于AO、VO</p>
-<h2 id="VO："><a href="#VO：" class="headerlink" title="VO："></a>VO：</h2><ul>
-<li>在全局上下文中，VO==全局对象，全局变量可以以全局对象的属性的形式访问（在某种程度佐证）</li>
-<li>在函数上下文中，VO不能直接访问，要通过AO访问，基本上AO==VO</li>
-</ul>
-<h2 id="AO："><a href="#AO：" class="headerlink" title="AO："></a>AO：</h2><p>&emsp;&emsp;Active Object，活动对象，函数的执行上下文才有，AO特有arguments属性，对应函数中的arguments</p>
-<h1 id="处理上下文代码的过程："><a href="#处理上下文代码的过程：" class="headerlink" title="处理上下文代码的过程："></a>处理上下文代码的过程：</h1><h2 id="1-进入执行上下文："><a href="#1-进入执行上下文：" class="headerlink" title="1.进入执行上下文："></a>1.进入执行上下文：</h2><h3 id="初始化VO"><a href="#初始化VO" class="headerlink" title="初始化VO"></a>初始化VO</h3><ul>
-<li>处理函数形参：根据形参名，在VO生成相应的属性，并赋予实参值，没传实参的赋undefined</li>
-<li>处理函数声明：在VO生成相应属性，如有同名的，则替换为对应的函数对象（函数声明提前），注意：只针对函数声明语句，非声明语句不处理</li>
-</ul>
-<p>&emsp;&emsp;特别的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var e = <span class="keyword">function</span> <span class="function"><span class="title">f</span></span>()&#123;&#125;;</div><div class="line">f;//Error, f is not defined. 因为上面代码不是函数声明语句，初始化时只被当做变量e的声明，而函数f被忽略，但到代码执行阶段，会将函数对象赋给e，通过e访问函数，依然不定义f</div></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp;类似的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(<span class="keyword">function</span> <span class="function"><span class="title">x</span></span>()&#123;&#125;);</div><div class="line">x;//Error, x is not defiend.</div></pre></td></tr></table></figure></p>
-<ul>
-<li>处理变量声明：在VO生成相应属性，赋值为undefined（变量声明提前），若VO有同名的，则忽略变量声明，不改变对应的同名VO属性值</li>
-</ul>
-<h3 id="初始化AO"><a href="#初始化AO" class="headerlink" title="初始化AO"></a>初始化AO</h3><ul>
-<li>在AO中生成arguments属性</li>
-<li>跟据VO内的属性，在AO内生成对应的，并赋值（不知道是复制还是直接赋引用）</li>
-</ul>
-<h2 id="2-执行代码"><a href="#2-执行代码" class="headerlink" title="2.执行代码"></a>2.执行代码</h2><p>&emsp;&emsp;根据每行代码的执行结果，修改AO或VO里的属性（即作用域里的变量）</p>
-<h1 id="Scope作用域链与-scope-："><a href="#Scope作用域链与-scope-：" class="headerlink" title="Scope作用域链与[[scope]]："></a>Scope作用域链与[[scope]]：</h1><ul>
-<li>[[scope]]是函数的内部属性，在函数定义或创建时，创建函数的上下文和该上下文的所有父上下文的变量对象组成链，并存在函数的[[scope]]中。</li>
-<li>Scope是执行上下文的一个属性，在函数调用激活时，以当前函数执行上下文的AO为头，拼接上[[scope]]，即形成作用链，存在Scope中</li>
-</ul>
-<p>&emsp;&emsp;所以，作用域链是由执行上下文栈中的当前和所有父上下文的AO或VO按栈的顺序串连起来的访问链</p>
+        <p><a href="http://www.jianshu.com/p/12b9f73c5a4f" target="_blank" rel="external">参考博文</a><br>图片源自上面的文章：<br><img src="http://ou1hsqn5g.bkt.clouddn.com/eventLoop.png?imageMogr2/thumbnail/!70p" alt="eventLoop"></p>
+<h1 id="要点："><a href="#要点：" class="headerlink" title="要点："></a>要点：</h1><p>1.js是单线程的，但有一个事件循环机制</p>
+<p>2.代码执行时，真正执行都是在函数调用栈中执行，在任务队列中等候执行。</p>
+<p>3.任务队列分为macro-task（task、宏任务）和micro-task（jobs、微任务）<br>&emsp;&emsp;macro-task大概包括：script(整体代码), setTimeout, setInterval, setImmediate, I/O, UI rendering。<br>&emsp;&emsp;micro-task大概包括: process.nextTick, Promise, Object.observe(已废弃), MutationObserver(html5新特性)<br>&emsp;&emsp;上面的叫做任务源，或任务分发器，把它们里面的回调函数分发到不同任务队列中去等候执行</p>
+<p>4.macro-task和micro-task里面又分成不同类型的任务源，同源的会依次一起执行，例如setTimeout与setInterval同类任务源，放在同一队列；与setImmediate不同源，如上图所示</p>
+<p>5.一次事件循环包括宏任务和微任务。顺序是：从script(整体代码，也算一个队列)开始，执行完宏任务中一个队列的可执行任务时（注意不是宏任务所有队列的任务），就执行微任务的所有队列（注意是所有）的可执行任务，一个事件循环结束，之后再选宏任务中下一个队列重新执行循环。</p>
+<p>6.setTimeout队列先于setImmediate队列    nextTick队列先于promise的then队列</p>
+<p>7.特殊的promise，构造函数里的参数回调是在new之后立即执行的，不再分发到任务队列中，then里面的参数回调要分发</p>
+<p>8.注意：不同环境下，执行顺序有所不同。chrome浏览器中，是执行完一个宏任务后就执行微任务了，而node下是执行完一个宏任务队列后再执行微任务</p>
 
     
 
@@ -426,13 +407,21 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
+        <a href="/2017/08/24/scopeChain/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/08/24/eventLoop/" id="post_nav-older" class="next-content">
+        <a href="/2017/08/06/prototype/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
