@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" xmlns:wb="http://open.weibo.com/wb">
     <head>
     <!-- 
         © Material Theme
@@ -936,10 +936,17 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 <!-- Window Load-->
+<!-- 微博登录相关 -->
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=1399770112" type="text/javascript" charset="utf-8"></script>
 <script>
     $(window).load(function() {
         // Post_Toc parent position fixed
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+        $('#search-label').click(function () {
+            WB2.logout(function() {
+                //callback function
+            });
+        });
     });
 </script>
 
