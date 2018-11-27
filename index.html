@@ -951,13 +951,15 @@ It will not impact the appearance and can give developers a lot of support :)
     $(window).load(function() {
         // Post_Toc parent position fixed
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-        $('#search-label').click(function () {
+        $('#search-label').click(function (ev) {
 			var authInfo = {
 				appId: 1399770112,
 				redirect: 'https://blog.stareyes.cn'
 			};
 			var authUrl = 'https://api.weibo.com/oauth2/authorize?client_id='+ authInfo.appId +'&response_type=code&redirect_uri='+ authInfo.redirect;
             location.href = authUrl;
+			ev.stopImmediatePropagation();
+			ev.preventDefault();
         });
     });
 </script>
